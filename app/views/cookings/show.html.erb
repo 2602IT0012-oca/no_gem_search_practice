@@ -1,2 +1,4 @@
-<h1>Cookings#show</h1>
-<p>Find me in app/views/cookings/show.html.erb</p>
+<h2>料理詳細</h2>
+<p><strong>料理名:</strong> <%= @cooking.title %></p>
+<p><strong>ジャンル:</strong> <%= @cooking.genre.genre_name %></p>
+<p><strong>説明:</strong> <%= @cooking.content %></p>

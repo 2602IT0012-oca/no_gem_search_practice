@@ -8,3 +8,89 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #ff9900;
+  padding: 15px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+
+.nav-list a,
+.logout-btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.container {
+  width: 750px;
+  margin: 30px auto;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.cooking-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cooking-table th,
+.cooking-table td.bordered {
+  border: 1px solid #888888;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.cooking-table th {
+  text-align: center;
+  font-weight: bold;
+}
+
+.col-title {
+  width: 20%;
+}
+
+.col-genre {
+  width: 20%;
+}
+
+.col-content {
+  width: 48%;
+}
+
+.col-link {
+  width: 12%;
+  padding-left: 8px;
+  font-size: 14px;
+  border: none;
+}

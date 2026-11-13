@@ -1,2 +1,30 @@
-<h1>Cookings#index</h1>
-<p>Find me in app/views/cookings/index.html.erb</p>
+<h2>料理一覧</h2>
+
+<h3>検索</h3>
+<%= form_with url: cookings_path, method: :get, class: "search-form" do |f| %>
+  <%= f.text_field :dish_name, placeholder: "料理名で検索", value: params[:dish_name] %>
+  <%= f.collection_select(:genre_id, Genre.all, :id, :genre_name, include_blank: " " ) %>
+  <%= f.submit "検索" %>
+<% end %>
+
+<h3>一覧</h3>
+<table class="cooking-table">
+  <thead>
+    <tr>
+      <th class="col-title">料理名</th>
+      <th class="col-genre">ジャンル</th>
+      <th class="col-content">説明</th>
+      <th class="col-link"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cookings.each do |cooking| %>
+      <tr>
+        <td class="bordered"><%= cooking.title %></td>
+        <td class="bordered"><%= cooking.genre.genre_name %></td>
+        <td class="bordered"><%= cooking.content %></td>
+        <td class="col-link"><%= link_to "料理詳細", cooking_path(cooking) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

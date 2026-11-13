@@ -1,2 +1,8 @@
-<h1>Genres#new</h1>
-<p>Find me in app/views/genres/new.html.erb</p>
+<h2>新規ジャンル</h2>
+<%= form_with model: @genre do |f| %>
+  <div class="form-group">
+    <%= f.label :genre_name, "ジャンル名" %>
+    <%= f.text_field :genre_name %>
+  </div>
+  <%= f.submit "登録" %>
+<% end %>
